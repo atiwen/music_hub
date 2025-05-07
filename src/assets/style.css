@@ -200,6 +200,9 @@ top: -28px;
   width: 85%;
   text-align: justify;
 }
+.swiper {
+  width: 100%;
+}
 .title-abus {
   color: #fff;
   font-size: 35px;

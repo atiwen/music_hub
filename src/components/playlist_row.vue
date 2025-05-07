@@ -1,6 +1,5 @@
 <template>
   <ul class="music-row">
-
     <swiper :slidesPerView="slidesPerView"  :centeredSlides="false" :pagination="{
       clickable: true,
     }"  class="m-row-5">
