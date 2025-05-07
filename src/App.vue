@@ -3,10 +3,12 @@
 
   <div class="row m-0">
     <!-- start left side -->
-    <div class="col-md-3 col-lg-2 px-4 bg-black left-side " :class="{width0: !isclose}">
+    <div class="col-md-3 col-lg-2 px-4 bg-black left-side " style="
+    background-color: #121212 !important;
+" :class="{width0: !isclose}">
       <div :class="{dnone: !isclose }">
-        
-      <h3 class="mt-4 text-left text-light" >Music Player</h3> 
+        <img src="./assets/images/logo.png" style="width: 13vw;margin-top: 21px;min-width: 172px;">
+      <!-- <h3 class="mt-4 text-left text-light" >Music Player</h3>  -->
       <i class="fa fa-times close-icon d-block d-md-none"  @click="isclose = !isclose"></i>
     <ul class="menu-item-list mt-4">
       <a :class="{ active: $route.path == '/'}" @click="gopage('/')">

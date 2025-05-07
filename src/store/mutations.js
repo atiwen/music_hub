@@ -1,7 +1,11 @@
 export default {
-    Play: (state, {index , listname}) => {
+    Play: (state, obj) => {
       // if play from list 
-      if (typeof index == "number") {
+      console.log(obj);
+      let id = obj[0];
+      let listname = obj[1];
+
+      if (typeof id == "number") {
         // if play from mainlist
         if(listname == 'main'){
           state.list = state.tracks
@@ -9,7 +13,13 @@ export default {
         }else if (listname == 'favs') {
           state.list = state.favs
         }
-        state.currentTrack = state.list[index];
+        let index ;
+        for (let i = 0; i < state.list.length; i++) {
+          if (state.list[i].id == id){
+            index = i;
+            state.currentTrack = state.list[i];
+          }
+        }
         
         state.currentTrackIndex = index;
         state.isTimerPlaying = true;

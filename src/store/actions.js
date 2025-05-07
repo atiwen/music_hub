@@ -1,6 +1,6 @@
 export default {
- Play: ({commit},{index , listname})=>{
-    commit('Play',{index,listname});
+ Play: ({commit}, obj)=>{
+    commit('Play',obj);
  },
  create: ({commit})=>{
      commit('create');

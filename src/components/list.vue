@@ -6,7 +6,7 @@
         <playlist :intracks="tracks" listname="main"></playlist>
         <br>
         <div class="row-title">Favorite</div> 
-        <playlist :intracks="favs" listname="main"></playlist>
+        <playlist :intracks="favs" listname="favs"></playlist>
 
       </div> 
 </template>

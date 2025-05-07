@@ -3,16 +3,21 @@
     <swiper :slidesPerView="slidesPerView"  :centeredSlides="false" :pagination="{
       clickable: true,
     }"  class="m-row-5">
-      <swiper-slide v-for="(track, index) in intracks" :key="index" @dblclick="Play({ index, listname })">
-        <div class="music-item">
-        
+      <swiper-slide v-for="(track, index) in intracks" :key="index">
+        <div class="music-item"  @dblclick="Playcv( track.id , listname )">
 
           <img :src="track.cover" />
-          <h6 > {{ track.name }}</h6>
-          <router-link :to="`/artist/${track.artist[0]}`">
-            {{ track.artist[0] }}
-          </router-link>
-
+          
+          <div style="display: flex;width: 231px;justify-content: space-between;margin-top: 17px;">
+          <div>
+            <h6 > {{ track.name }}</h6>
+            <router-link :to="`/artist/${track.artist[0]}`">
+              {{ track.artist[0] }}
+            </router-link>
+          </div>
+          <div class="play-loader" v-if="currentTrack.id == track.id && isTimerPlaying"></div>
+          </div>
+            
         </div>
       </swiper-slide>
 
@@ -26,7 +31,7 @@ import 'swiper/css';
 </script>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 
 export default {
   data() {
@@ -34,7 +39,12 @@ export default {
       slidesPerView: 1,
     };
   },
-
+  computed: {
+      ...mapState([
+        'currentTrack',
+        'isTimerPlaying',
+      ])
+    },
   props: {
     intracks: Array,
     listname: String
@@ -53,6 +63,11 @@ export default {
       const totalItemWidth = itemWidth + margin;
       const newSlides = Math.floor(window.innerWidth / totalItemWidth);
       this.slidesPerView = Math.max(1, newSlides);
+    },
+    Playcv(id, listname){
+      let obj = [ id, listname ];
+
+      this.Play(obj)
     },
     ...mapActions([
       'Play'

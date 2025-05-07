@@ -17,6 +17,7 @@ export default {
   list:null,
   tracks: [
     {
+     id:1,
       name: "Sefarshi",
       artist: ["Yas"],
       cover:
@@ -28,7 +29,8 @@ export default {
   },
  
     {
-      name: "Prelude in B Minor, Op. 28, No6",
+     id:2,
+      name: "Prelude ",
       artist: ["Chad Lawson"],
   
       cover:
@@ -39,6 +41,7 @@ export default {
       favorited: true,
     },
     {
+     id:3,
       name: "Boyz in The Hood",
       artist: ["Pishro"],
       cover:
@@ -49,6 +52,7 @@ export default {
     favorited: false,
   },
     {
+     id:4,
       name: "Winter",
       artist: ["vivaldi"],
   
@@ -60,7 +64,8 @@ export default {
         favorited: true,
       },
       {
-      name: "",
+     id:5,
+        name: "",
       artist: ["Sohrab MJ"],
   
       cover:
@@ -71,6 +76,7 @@ export default {
         favorited: false,
       },
     {
+     id:6,
       name: "06 No. 1 in E Major",
       artist: ["Pagnini"],
   
@@ -84,6 +90,7 @@ export default {
     
       
         {
+         id:7,
           name: "Gole Man",
           artist: ["Khalse"],
           cover:
@@ -94,6 +101,7 @@ export default {
         favorited: false,
       },
         {
+         id:8,
           name: "Pizzicato Polka",
           artist: ["johann strauss"],
           cover:
@@ -104,6 +112,7 @@ export default {
         favorited: true,
       },
       {
+       id:9,
         name: "Boyz in The Hood",
         artist: ["N.W.A"],
         cover:

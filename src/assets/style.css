@@ -4,10 +4,12 @@
     padding: 6px 22px;
     border-radius: 6px;
 }
-
+.list li.active {
+  background-color: #72727226;
+  margin: 5px 0;
+}
 .list li:hover{
-    background-color: rgba(114, 114, 114, 0.205);
-    
+    background-color: rgba(114, 114, 114, 0.205); 
   }
 
 .list li h6 {
@@ -202,6 +204,28 @@ top: -28px;
 }
 .swiper {
   width: 100%;
+}
+.play-loader {
+  width: 26px;
+  aspect-ratio: .75;
+  --c: no-repeat linear-gradient(#009269 0 0);
+  background: var(--c) 0%   50%,
+  var(--c) 50%  50%,
+  var(--c) 100% 50%;
+  animation: l7 1s infinite linear alternate;
+  margin: 0px;
+}
+.play-loader.list {
+  width: 23px;
+}
+
+@keyframes l7 {
+  0%  {background-size: 20% 50% ,20% 50% ,20% 50% }
+  20% {background-size: 20% 20% ,20% 50% ,20% 50% }
+  40% {background-size: 20% 100%,20% 20% ,20% 50% }
+  60% {background-size: 20% 50% ,20% 100%,20% 20% }
+  80% {background-size: 20% 50% ,20% 50% ,20% 100%}
+  100%{background-size: 20% 50% ,20% 50% ,20% 50% }
 }
 .title-abus {
   color: #fff;
