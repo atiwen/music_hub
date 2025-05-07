@@ -1,0 +1,263 @@
+
+/* list styles */
+.list li {
+    padding: 6px 22px;
+    border-radius: 6px;
+}
+
+.list li:hover{
+    background-color: rgba(114, 114, 114, 0.205);
+    
+  }
+
+.list li h6 {
+  font-size: 1rem;
+  margin: 0 !important;
+  cursor:context-menu;
+}
+.list li a:hover {
+    text-decoration-line: underline;
+}
+.list li a {
+    font-size: 0.875rem;
+    color: #8e8e8e;
+    margin: 0 !important;
+    cursor: pointer; 
+    width: 100px;
+    text-decoration-line: none;
+} 
+.list li .row .num-col{
+    width: 30px;
+}
+.list li .row .img-col{
+    width: 60px;
+    }
+.list li .row .img-col img {
+    width: 46px;
+  }
+.list li:hover p.num-index::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f04b";
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.list li:focus p.num-index::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f04b";
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.list li:hover p.num-index {
+  font-size: 0px;
+  }
+.list li .row  p.num-index {
+    margin: 13px 0px 0px 0px;
+}
+ 
+
+
+body{
+  background-color: #121212;
+  overflow-x: hidden;
+}
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50 ;
+    background-color:#121212
+  }
+  nav {
+    padding: 30px;
+  }
+  nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  nav a.router-link-exact-active {
+    color: #42b983;
+  }
+  h6, h5, h4, h3, h2, h1, li {
+  color: #fff;
+  }
+  
+.text-hover:hover{
+    color: #fff;
+  }
+  .text-hover{
+    color: #bababa;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 , p{
+    margin-bottom: 0px !important;
+
+}
+a{
+  text-decoration: none;
+}
+@media (max-width: 768px){
+
+  .dnone{
+    display: none;
+  }
+  .width0{
+    height: 0px !important;
+  }
+}
+.close-icon{
+cursor:pointer;
+color:#fff;
+right: -90%;
+position: relative;
+top: -28px;
+}
+
+@media(max-width: 768px){
+  .vol-col {
+    position: absolute;
+    /* right: 0; */
+    /* bottom: 62px; */
+    /* width: 124px !important; */
+  }
+  .vol-ic{
+  position: absolute;
+  bottom: -125px;
+  right: 21px;
+}
+.volbar{
+  position: absolute;
+  bottom: -65px;
+  right: -25px;
+  transform: rotate(-90deg);
+  display: block !important;
+  width: 104px !important;
+
+}
+}
+
+@media (max-width: 576px){
+  }
+  .player-controls__item.-favorite {
+    float: right;
+}
+
+/* awesome for vue  */
+.faPlay:before {
+  content: "\f04b";
+}
+
+.faPause:before {
+  content: "\f04c";
+}
+.faVolumeOff::before {
+  content: "\f026";
+}
+.faVolumeLow::before {
+  content: "\f027";
+}
+.faVolume::before {
+  content: "\f6a8";
+}
+.faVolumeHigh::before {
+  content: "\f028";
+}
+.faVolumeSlash::before {
+  content: "\f6a9";
+}
+/* sm styles */
+
+@media (max-width: 768px) {
+
+  .center-sm {
+    text-align: center;
+  }
+
+
+}
+
+/* text compress */
+
+.compress{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: none;
+
+}
+.compress::-webkit-scrollbar {
+  width: 0;
+}
+.compress::moz{
+  width: 0;
+}
+.team-desc {
+  color: #fff;
+  font-size: 17px;
+  margin: auto;
+  width: 85%;
+  text-align: justify;
+}
+.title-abus {
+  color: #fff;
+  font-size: 35px;
+  margin: auto;
+  width: 85%;
+  margin-bottom: 11px;
+}
+.links-col {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.link-item i{
+  color: #fff;
+  font-size: 25px;
+}
+
+.link-item {
+  color: #31bbff;
+  font-size: 21px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  margin: 10px 0;
+}
+ul.music-row {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+}
+ul.music-row::-webkit-scrollbar {
+  background-color: #121212;
+}
+ul.music-row::-webkit-scrollbar-track {
+  background-color: #898989;
+  width: 10px;
+}
+
+.music-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.music-item img {
+  width: 230px;
+  height: 230px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0px #005d6b59;
+}
+
+.row-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 26px;
+  margin-left: 43px;
+  margin-bottom: 25px;
+}
