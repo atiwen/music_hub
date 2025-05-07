@@ -1,10 +1,10 @@
 {
-  "name": "ali-proj",
+  "name": "MusicHub",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vue-music-Player/",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
